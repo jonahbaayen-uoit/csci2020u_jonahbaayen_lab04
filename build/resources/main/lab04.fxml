@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import com.github.jonahbaayen.lab04.components.NumericTextField?>
+<?import com.github.jonahbaayen.lab04.components.EmailTextField?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.github.jonahbaayen.lab04.Lab04Controller" prefWidth="640" prefHeight="380" >
+    <children>
+        <GridPane hgap="10" vgap="10">
+            <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+            <Label text="Enter your information:"/>
+        </GridPane>
+        <GridPane hgap="10" vgap="10">
+            <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+
+            <Label fx:id="username" text="Username: " GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="usernameField" GridPane.rowIndex="0" GridPane.columnIndex="1" promptText="Username"/>
+
+            <Label fx:id="password" text="Password: " GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <PasswordField fx:id="passwordField" GridPane.rowIndex="1" GridPane.columnIndex="1" promptText="Password"/>
+
+            <Label fx:id="fullname" text="Full Name: " GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField fx:id="fullnameField" GridPane.rowIndex="2" GridPane.columnIndex="1" promptText="Full Name"/>
+
+            <Label fx:id="email" text="E-mail: " GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <EmailTextField fx:id="emailField" GridPane.rowIndex="3" GridPane.columnIndex="1" promptText="E-mail" onKeyTyped="#checkEmail"/>
+            <Label fx:id="emailError" text="" GridPane.rowIndex="3" GridPane.columnIndex="2"/>
+
+            <Label fx:id="phone" text="Phone #: " GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+            <NumericTextField fx:id="phoneField" GridPane.rowIndex="4" GridPane.columnIndex="1" promptText="Phone #"/>
+
+            <Label fx:id="dateofbirth" text="Date of Birth: " GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+            <DatePicker fx:id="dateofbirthField" GridPane.rowIndex="5" GridPane.columnIndex="1"  promptText="Date of Birth"/>
+
+            <Button fx:id="button1" text="Register" onAction="#register" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+        </GridPane>
+        <GridPane hgap="10" vgap="10">
+            <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+            <Label fx:id="error" text=""/>
+        </GridPane>
+
+    </children>
+</VBox>
+
